@@ -1,0 +1,50 @@
+* {
+  /*  border: 1px solid rgb(179, 255, 211); */
+  font-size: 1.05rem;
+}
+
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  background-image: linear-gradient(#1206b3, #e8095b);}
+
+#menu-container {
+  position: absolute;
+  top: 35%;
+}
+
+#menu-row {}
+
+.button-people, .button-nature,
+.button-architecture, .button-food,
+.button-sports {
+
+  min-width: 100px;
+}
+
+.button-people:hover, .button-nature:hover,
+.button-architecture:hover, .button-food:hover,
+.button-sports:hover {
+  background-color: rgb(240, 64, 89) !important;
+  color: rgb(236, 236, 236);
+}
+
+#dropdown-people, #dropdown-nature,
+#dropdown-architecture, #dropdown-food,
+#dropdown-sports {
+  position: absolute;
+  width: 500px;
+}
+
+#dropdown-people a, #dropdown-nature a,
+#dropdown-architecture a, #dropdown-food a,
+#dropdown-sports a {
+  display: block;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
