@@ -1,21 +1,34 @@
 * {
-  /*  border: 1px solid rgb(179, 255, 211); */
+  border: 1px solid rgb(188, 218, 228);
   font-size: 1.05rem;
 }
+
+.bg-primary {
+  background-color: rgb(10, 85, 241) !important;
+}
+
+.bg-danger {
+  background-color: rgb(241, 48, 76) !important;
+}
+
 
 html {
     height: 100%;
 }
-body {
-    height: 100%;
-    margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  background-image: linear-gradient(#1206b3, #e8095b);}
+
+
+.gradient-background {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+background-image: linear-gradient(#1206b3, #e8095b);
+}
 
 #menu-container {
   position: absolute;
-  top: 35%;
+  top: 25%;
 }
 
 #menu-row {}
@@ -23,14 +36,20 @@ body {
 .button-people, .button-nature,
 .button-architecture, .button-food,
 .button-sports {
-
   min-width: 100px;
 }
+/*
+.button-people:active, .button-nature:active,
+.button-architecture:active, .button-food:active,
+.button-sports:active {
+  background-color: rgb(241, 48, 76) !important;
+}
+*/
 
 .button-people:hover, .button-nature:hover,
 .button-architecture:hover, .button-food:hover,
 .button-sports:hover {
-  background-color: rgb(240, 64, 89) !important;
+  background-color: rgb(241, 48, 76) !important;
   color: rgb(236, 236, 236);
 }
 
@@ -38,7 +57,7 @@ body {
 #dropdown-architecture, #dropdown-food,
 #dropdown-sports {
   position: absolute;
-  width: 500px;
+  width: 150px;
 }
 
 #dropdown-people a, #dropdown-nature a,
@@ -47,4 +66,17 @@ body {
   display: block;
   text-decoration: none;
   color: rgb(255, 255, 255);
+  padding: 5px;
+  font-size: 15px;
+
+  -webkit-transition: color 0.25s, font-size 0.25s;
+     -moz-transition: color 0.25s, font-size 0.25s;
+       -o-transition: color 0.25s, font-size 0.25s;
+          transition: color 0.25s, font-size 0.25s;
+}
+
+#dropdown-people a:hover, #dropdown-nature a:hover,
+#dropdown-architecture a:hover, #dropdown-food a:hover,
+#dropdown-sports a:hover {
+     font-size: 20px;
 }
