@@ -11,51 +11,43 @@ window.addEventListener("click", function(event) {
     document.getElementById('menu-container').classList.toggle("invisible");
     document.getElementById('body').classList.toggle("gradient-background");
     document.getElementById('home-page').classList.toggle("invisible");
-
   }
 
   if(event.target.matches('#view-navigation')) {
     document.getElementById('home-page').classList.toggle("invisible");
     document.getElementById('body').classList.toggle("gradient-background");
     document.getElementById('menu-container').classList.toggle("invisible");
-
-
 }
   //Clear all
   if (event.target.matches('body') || event.target.matches('#menu-row')) {
     RemoveActiveButtons();
     RemoveDropdownList();
   }
-
+  //If Buttons get clicked
   if (event.target.matches('.button-people')) {
     RemoveActiveButtons();
     SetButtonActive("people");
     RemoveDropdownList();
     dropdownPeople.classList.toggle('invisible');
   }
-
   if (event.target.matches('.button-nature')) {
     RemoveActiveButtons();
     SetButtonActive("nature");
     RemoveDropdownList();
     dropdownNature.classList.toggle('invisible');
   }
-
   if (event.target.matches('.button-architecture')) {
     RemoveActiveButtons();
     SetButtonActive("architecture");
     RemoveDropdownList();
     dropdownArchitecture.classList.toggle('invisible');
   }
-
   if (event.target.matches('.button-food')) {
     RemoveActiveButtons();
     SetButtonActive("food");
-
     RemoveDropdownList();
     dropdownFood.classList.toggle('invisible');
   }
-
   if (event.target.matches('.button-sports')) {
     RemoveActiveButtons();
     SetButtonActive("sports");
@@ -64,6 +56,8 @@ window.addEventListener("click", function(event) {
   }
 });
 
+// Change the color of a background when selected, and make sure
+// no other button is selected.
 function SetButtonActive(buttonSelected) {
   let buttonToSetActive = buttonSelected;
   if (buttonToSetActive === "people") {
@@ -88,6 +82,7 @@ function SetButtonActive(buttonSelected) {
   }
 }
 
+// Remove the dropdown content.
 function RemoveDropdownList() {
   if (!dropdownPeople.classList.contains("invisible")) {
     dropdownPeople.classList.toggle('invisible');
